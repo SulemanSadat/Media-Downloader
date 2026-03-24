@@ -34,14 +34,13 @@ A powerful Telegram bot that instantly downloads videos from popular platforms a
 
 
 media-downloader-bot/
-│
 ├── src/
 │ ├── bot/
 │ │ └── handlers.js # Telegram bot handlers
 │ │
 │ ├── services/
 │ │ ├── downloader.js # Main download logic
-│ │ ├── platformDetector.js
+│ │ ├── platformDetector.js # Detects platform from URL
 │ │ └── extractors/
 │ │ ├── tiktok.js
 │ │ ├── instagram.js
@@ -52,13 +51,12 @@ media-downloader-bot/
 │ │ └── threads.js
 │ │
 │ ├── config/
-│ │ └── index.js
+│ │ └── index.js # Configuration variables
 │ │
 │ └── index.js # Entry point
 │
-├── package.json
-└── README.md
-
+├── package.json # Project metadata & dependencies
+└── README.md # Project documentation
 
 ---
 
@@ -67,38 +65,48 @@ media-downloader-bot/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/media-downloader-bot.git
-cd media-downloader-bot
+git clone https://github.com/SulemanSadat/Media-Downloader.git
+cd media-downloader
+```  
 Install dependencies
+```bash
 npm install
-Set up environment variables
+```  
+## Set up environment variables
 
 Create a .env file in the root folder:
 
+```bash
 BOT_TOKEN=your_telegram_bot_token
+```  
 Run the bot
+
+```bash
 npm start
-💬 Usage
+```  
+## 💬 Usage
 Open your bot in Telegram
 Send /start
 Paste a video link
 Receive your video instantly 🎉
-⚠️ Notes
+
+## ⚠️ Notes
 Threads support is limited due to platform restrictions
 Some platforms may require:
 VPN 🌍
 Public content access 🔓
 Large videos may take longer to process
-🚀 Deployment (Free)
+
+## 🚀 Deployment (Free)
 
 Recommended: Render (Background Worker)
 
 Start command:
 
+```bash
 node src/index.js
-
+``` 
 How it works:
-
 Detect platform from URL
 Try direct extractor (fast)
 Fallback to yt-dlp if needed
@@ -106,25 +114,22 @@ Send video to Telegram
 Clean up temporary files
 
 Future improvements:
-
 Add Puppeteer for better Threads support
 Proxy support for restricted platforms
 Queue system for scaling
 Database for analytics
-🤝 Contributing
 
+## 🤝 Contributing
 Pull requests are welcome.
 For major changes, please open an issue first.
 
-📄 License
-
+## 📄 License
 MIT License
 
-👨‍💻 Author
-
+## 👨‍💻 Author
 Suleman Sadat
 Software Engineer | Full-Stack Developer
 
-⭐ Support
+## ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
