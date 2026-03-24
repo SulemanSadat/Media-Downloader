@@ -30,36 +30,6 @@ A powerful Telegram bot that instantly downloads videos from popular platforms a
 
 ---
 
-## 📦 Project Structure
-
-
-media-downloader-bot/
-├── src/
-│ ├── bot/
-│ │ └── handlers.js # Telegram bot handlers
-│ │
-│ ├── services/
-│ │ ├── downloader.js # Main download logic
-│ │ ├── platformDetector.js # Detects platform from URL
-│ │ └── extractors/
-│ │ ├── tiktok.js
-│ │ ├── instagram.js
-│ │ ├── youtube.js
-│ │ ├── facebook.js
-│ │ ├── pinterest.js
-│ │ ├── linkedin.js
-│ │ └── threads.js
-│ │
-│ ├── config/
-│ │ └── index.js # Configuration variables
-│ │
-│ └── index.js # Entry point
-│
-├── package.json # Project metadata & dependencies
-└── README.md # Project documentation
-
----
-
 ## ⚙️ Installation
 
 1. **Clone the repository**
