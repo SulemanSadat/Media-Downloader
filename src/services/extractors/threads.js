@@ -14,7 +14,7 @@ export default async function threads(url) {
 
     const page = await browser.newPage();
 
-    // Pretend to be real browser
+   
     await page.setUserAgent(
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
     );
