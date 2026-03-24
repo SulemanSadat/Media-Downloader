@@ -14,11 +14,10 @@ A powerful Telegram bot that instantly downloads videos from popular platforms a
   - Pinterest
   - LinkedIn
   - Threads *(limited support)*
-
-- ⚡ Fast and automated processing  
-- 🎥 Direct video delivery in Telegram  
-- 🧠 Smart platform detection  
-- 🗂 Temporary file handling & cleanup  
+- ⚡ Fast and automated processing
+- 🎥 Direct video delivery in Telegram
+- 🧠 Smart platform detection
+- 🗂 Temporary file handling & cleanup
 
 ---
 
@@ -34,91 +33,98 @@ A powerful Telegram bot that instantly downloads videos from popular platforms a
 ## 📦 Project Structure
 
 
-src/
+media-downloader-bot/
 │
-├── bot/
-│ └── handlers.js # Telegram bot handlers
+├── src/
+│ ├── bot/
+│ │ └── handlers.js # Telegram bot handlers
+│ │
+│ ├── services/
+│ │ ├── downloader.js # Main download logic
+│ │ ├── platformDetector.js
+│ │ └── extractors/
+│ │ ├── tiktok.js
+│ │ ├── instagram.js
+│ │ ├── youtube.js
+│ │ ├── facebook.js
+│ │ ├── pinterest.js
+│ │ ├── linkedin.js
+│ │ └── threads.js
+│ │
+│ ├── config/
+│ │ └── index.js
+│ │
+│ └── index.js # Entry point
 │
-├── services/
-│ ├── downloader.js # Main download logic
-│ ├── platformDetector.js
-│ └── extractors/
-│    ├── tiktok.js
-│    ├── instagram.js
-│    ├── youtube.js
-│    ├── facebook.js
-│    ├── pinterest.js
-│    ├── linkedin.js
-│    └── threads.js
-│
-├── config/
-│ └── index.js
-│
-└── index.js # Entry point
+├── package.json
+└── README.md
 
 
 ---
 
 ## ⚙️ Installation
 
+1. **Clone the repository**
+
 ```bash
 git clone https://github.com/your-username/media-downloader-bot.git
 cd media-downloader-bot
+Install dependencies
 npm install
+Set up environment variables
 
-🔐 Environment Variables
-
-Create a .env file:
+Create a .env file in the root folder:
 
 BOT_TOKEN=your_telegram_bot_token
-▶️ Run the Bot
+Run the bot
 npm start
-
-## 💬 Usage
+💬 Usage
 Open your bot in Telegram
 Send /start
 Paste a video link
-Get your video instantly 🎉
-
-## ⚠️ Notes
+Receive your video instantly 🎉
+⚠️ Notes
 Threads support is limited due to platform restrictions
 Some platforms may require:
 VPN 🌍
 Public content access 🔓
 Large videos may take longer to process
+🚀 Deployment (Free)
 
-## 🚀 Deployment (Free)
-Recommended:
-Render (Background Worker)
+Recommended: Render (Background Worker)
 
-Start Command:
+Start command:
 
 node src/index.js
 
-🧠 How It Works
+How it works:
+
 Detect platform from URL
 Try direct extractor (fast)
-Fallback to yt-dlp
+Fallback to yt-dlp if needed
 Send video to Telegram
-Clean up temp files
+Clean up temporary files
 
-📌 Future Improvements
- Add Puppeteer for Threads support
- Proxy support for restricted platforms
- Queue system for scaling
- Database for analytics
+Future improvements:
 
-## 🤝 Contributing
+Add Puppeteer for better Threads support
+Proxy support for restricted platforms
+Queue system for scaling
+Database for analytics
+🤝 Contributing
 
 Pull requests are welcome.
-For major changes, open an issue first.
+For major changes, please open an issue first.
 
-## 📄 License
+📄 License
+
 MIT License
 
-## 👨‍💻 Author
+👨‍💻 Author
+
 Suleman Sadat
 Software Engineer | Full-Stack Developer
 
-## ⭐ Support
+⭐ Support
+
 If you like this project, give it a ⭐ on GitHub!
